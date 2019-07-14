@@ -5,6 +5,8 @@ class Option extends Component {
     state = {
         value: 0,
       };
+
+      
     onChange = e => {
         console.log('radio checked', this.props.optionObj.id);
         this.setState({
