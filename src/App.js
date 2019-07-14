@@ -1,7 +1,8 @@
 import React, { Component } from 'react';
 import './App.css';
 import myQuestions from './QuestionsArray/QuestionsArray';
-
+import { version, Button } from 'antd';
+import 'antd/dist/antd.css'
 import Question from './Question/Question';
 
 class App extends Component {
@@ -46,13 +47,13 @@ class App extends Component {
 		let countB = 0;
 		let countC = 0;
 		for(var i = 0; i < this.state.TotalLeter.length; ++i){
-			if(this.state.TotalLeter[i] == "A"){
+			if(this.state.TotalLeter[i] === "A"){
 				countA++;
 			}
-			if(this.state.TotalLeter[i] == "B"){
+			if(this.state.TotalLeter[i] === "B"){
 				countB++;
 			}
-			if(this.state.TotalLeter[i] == "C"){
+			if(this.state.TotalLeter[i] === "C"){
 				countC++;
 			}
 				
@@ -68,16 +69,11 @@ class App extends Component {
 
 		return (
 			<div className="App">
-				<React.Fragment>
-					
 					{questionsOutput}
-					<button onClick={this.switchStepNext}>Next</button>
-
+					<Button type="primary" onClick={this.switchStepNext}>Next</Button>
 					<p>A-{countA} count</p>
 					<p>B-{countB} count</p>
 					<p>C-{countC} count</p>
-				</React.Fragment>
-				
 			</div>
 		);
 	}

@@ -10,7 +10,7 @@ class Question extends Component {
         return <Option 
                     key={theOption.id} 
                     optionObj={theOption}
-
+                    isCurrent={this.props.isCurrent}
                     questionId={this.questionObj.id} 
                     changeScore={this.props.changeScore} 
                 />
